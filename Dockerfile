@@ -6,5 +6,5 @@ RUN wget -qO - https://api.github.com/repos/l3uddz/mediarr/releases/latest  \
       | grep linux_amd64 \
       | cut -d  '"' -f 4 \
       | wget -cqi - -O mediarr
-
+RUN ["chmod", "+x", "mediarr"]
 ENTRYPOINT ["./mediarr"]
