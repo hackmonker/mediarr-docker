@@ -28,10 +28,6 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ghcr.io/hackmonker/mediarr
-          tags: |
-            type=ref,event=tag
-            type=ref,event=branch
-            type=ref,event=pr
         
       - name: Build and publish
         uses: docker/build-push-action@v2
