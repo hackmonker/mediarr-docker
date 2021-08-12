@@ -1,11 +1,4 @@
 name: Mediarr Docker
-# on:
-#   pull_request:
-#   push:
-#     branches:
-#       - beta
-#     tags:
-#       - *
 
 on:
    push:
