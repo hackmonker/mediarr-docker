@@ -1,8 +1,9 @@
 name: Mediarr Docker
 
 on:
-   push:
-     tags: '*'
+  push:
+    branches: 
+        - master
   
 jobs:
   build:
