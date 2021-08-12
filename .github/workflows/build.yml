@@ -7,11 +7,9 @@ name: Mediarr Docker
 #       - beta
 #     tags:
 #       - *
-
 on:
-  push:
-    branches: 
-        - main
+   push:
+     tags: '*'
   
 jobs:
   build:
