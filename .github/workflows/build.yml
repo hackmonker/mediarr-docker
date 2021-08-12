@@ -35,7 +35,7 @@ jobs:
         id: metaraw
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/xd003/filebot
+          images: ghcr.io/hackmonker/mediarr
           tags: |
             type=ref,event=tag
             type=ref,event=branch
