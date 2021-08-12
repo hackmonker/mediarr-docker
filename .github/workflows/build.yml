@@ -1,13 +1,12 @@
 name: Mediarr Docker
 
- on:
-   push:
-     branches:
-         - main
-#    tags:
-#        - *
+on:
+  push:
+    branches: 
+        - main
+    tags:
+        - '*'
 
-  
 jobs:
   build:
     runs-on: ubuntu-latest
