@@ -1,7 +1,12 @@
 FROM alpine:latest
 
-RUN apt install -y wget \  
-RUN wget -O mediarr https://github.com/l3uddz/mediarr/releases/download/v1.2.0/mediarr_v1.2.0_linux_amd64
+RUN apk add --no-cache wget \  
+      wget -qO - https://api.github.com/repos//l3uddz/mediarr/releases/latest  \
+      | grep browser_download_url \
+      | grep linux_amd64 \
+      | cut -d  '"' -f 4 \
+      | wget -cqi - -O mediarr
+      
 RUN chmod +x mediarr
 
 ENTRYPOINT ["./mediarr"]
